@@ -10,6 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var calcDisplay: UILabel!
+    var isTyping = false
+    var firstNumber = 0
+    var secondNumber = 0
+    var operation = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -18,9 +24,19 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-        test
+        //test
     }
-
-
+   
+    @IBAction func numberTapped(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func calculationTapped(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func equalsTapped(sender: AnyObject) {
+        
+    }
 }
 

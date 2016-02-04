@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     var isTyping = false
     var firstNumber:Int? = 0
     var secondNumber:Int? = 0
-    var operation = ""
+    var operation:String? = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     @IBAction func calculationTapped(sender: AnyObject) {
         isTyping = false
         firstNumber = Int(calcDisplay.text!)
-        operation = String(sender.currentTitle!)
+        operation = sender.currentTitle!
     }
     
     @IBAction func equalsTapped(sender: AnyObject) {
@@ -65,6 +65,7 @@ class ViewController: UIViewController {
     
         calcDisplay.text = String(result)
     }
+    
     @IBAction func clearTapped(sender: AnyObject) {
     }
 }

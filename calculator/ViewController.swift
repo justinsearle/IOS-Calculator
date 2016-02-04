@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var calcDisplay: UILabel!
     var isTyping = false
-    var firstNumber = 0
-    var secondNumber = 0
+    var firstNumber:Int? = 0
+    var secondNumber:Int? = 0
     var operation = ""
     
     override func viewDidLoad() {
@@ -28,15 +28,44 @@ class ViewController: UIViewController {
     }
    
     @IBAction func numberTapped(sender: AnyObject) {
+        var number:String? = sender.currentTitle!
         
+        if isTyping {
+            calcDisplay.text = calcDisplay.text! + number!
+        }
+        else {
+            calcDisplay.text = number!
+            isTyping = true
+        }
     }
     
     @IBAction func calculationTapped(sender: AnyObject) {
-        
+        isTyping = false
+        firstNumber = Int(calcDisplay.text!)
+        operation = String(sender.currentTitle!)
     }
     
     @IBAction func equalsTapped(sender: AnyObject) {
+        isTyping = false
+        var result = 0
+        secondNumber = Int(calcDisplay.text!)
         
+        if operation == "+" {
+            result = firstNumber! + secondNumber!
+        }
+        else if operation == "-" {
+            result = firstNumber! - secondNumber!
+        }
+        else if operation == "/" {
+            result = firstNumber! / secondNumber!
+        }
+        else if operation == "*" {
+            result = firstNumber! * secondNumber!
+        }
+    
+        calcDisplay.text = String(result)
+    }
+    @IBAction func clearTapped(sender: AnyObject) {
     }
 }
 

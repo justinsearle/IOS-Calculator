@@ -12,8 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var calcDisplay: UILabel!
     var isTyping = false
-    var firstNumber:Int? = 0
-    var secondNumber:Int? = 0
+    var firstNumber:Float? = 0
+    var secondNumber:Float? = 0
     var operation:String? = ""
     
     override func viewDidLoad() {
@@ -26,6 +26,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
    
+    @IBAction func decimalTapped(sender: AnyObject) {
+        var number:Float? = Float(calcDisplay.text!)
+        
+        if (number! - floor(number!) == 0) { // 0.000001 can be changed depending on the level of precision you need
+            calcDisplay.text = calcDisplay.text! + "."
+        }
+    }
+    
     @IBAction func numberTapped(sender: AnyObject) {
         var number:String? = sender.currentTitle!
         
@@ -40,14 +48,15 @@ class ViewController: UIViewController {
     
     @IBAction func calculationTapped(sender: AnyObject) {
         isTyping = false
-        firstNumber = Int(calcDisplay.text!)
+        firstNumber = Float(calcDisplay.text!)
         operation = sender.currentTitle!
     }
     
     @IBAction func equalsTapped(sender: AnyObject) {
         isTyping = false
-        var result = 0
-        secondNumber = Int(calcDisplay.text!)
+        var result:Float = 0
+        
+        secondNumber = Float(calcDisplay.text!)
         
         if operation == "+" {
             result = firstNumber! + secondNumber!
@@ -61,11 +70,23 @@ class ViewController: UIViewController {
         else if operation == "*" {
             result = firstNumber! * secondNumber!
         }
-    
-        calcDisplay.text = String(result)
+        
+        if result % 1 == 0 {
+            calcDisplay.text = String(Int(result))
+        }
+        else {
+            calcDisplay.text = String(result)
+        }
+        
+        
     }
     
     @IBAction func clearTapped(sender: AnyObject) {
+        isTyping = false
+        firstNumber = 0
+        secondNumber = 0
+        operation = ""
+        calcDisplay.text = "0"
     }
 }
 

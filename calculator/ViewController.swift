@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     @IBAction func decimalTapped(sender: AnyObject) {
         var number:Float? = Float(calcDisplay.text!)
         
-        if (number! - floor(number!) == 0) { // 0.000001 can be changed depending on the level of precision you need
+        if (number! - floor(number!) == 0) {
             calcDisplay.text = calcDisplay.text! + "."
         }
     }
@@ -77,8 +77,6 @@ class ViewController: UIViewController {
         else {
             calcDisplay.text = String(result)
         }
-        
-        
     }
     
     @IBAction func clearTapped(sender: AnyObject) {

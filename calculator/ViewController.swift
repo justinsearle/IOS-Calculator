@@ -55,7 +55,7 @@ class ViewController: UIViewController {
     @IBAction func equalsTapped(sender: AnyObject) {
         isTyping = false
         var result:Float = 0
-        
+
         secondNumber = Float(calcDisplay.text!)
         
         if operation == "+" {

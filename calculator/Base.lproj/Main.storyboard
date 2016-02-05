@@ -148,6 +148,15 @@
                                     <action selector="calculationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tiw-aw-Fd4"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39B-8Y-IGV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.33071547610000002" green="1" blue="0.27483115850000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="*"/>
+                                <connections>
+                                    <action selector="calculationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwr-Ju-sBv"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKN-IA-2KJ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.33071547606157048" green="1" blue="0.27483115847778405" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,12 +166,6 @@
                                     <action selector="clearTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PZ8-P7-ScX"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-vd-gm5">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jvc-L6-MLW">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.33071547610000002" green="1" blue="0.27483115850000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -181,15 +184,13 @@
                                     <action selector="equalsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jdd-5r-v9q"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39B-8Y-IGV">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.33071547610000002" green="1" blue="0.27483115850000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="*"/>
-                                <connections>
-                                    <action selector="calculationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwr-Ju-sBv"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hsg-vd-gm5">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <color key="backgroundColor" red="0.23369924918582441" green="0.91776273521862095" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -286,11 +287,11 @@
                                 <exclude reference="Mdv-kv-19Z"/>
                                 <exclude reference="nfF-LH-vlP"/>
                                 <exclude reference="UZP-mH-iwm"/>
+                                <exclude reference="39B-8Y-IGV"/>
                                 <exclude reference="lKN-IA-2KJ"/>
-                                <exclude reference="Hsg-vd-gm5"/>
                                 <exclude reference="Jvc-L6-MLW"/>
                                 <exclude reference="9Pm-s4-FV8"/>
-                                <exclude reference="39B-8Y-IGV"/>
+                                <exclude reference="Hsg-vd-gm5"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3ao-fJ-ewz"/>
@@ -387,11 +388,11 @@
                                 <include reference="Mdv-kv-19Z"/>
                                 <include reference="nfF-LH-vlP"/>
                                 <include reference="UZP-mH-iwm"/>
+                                <include reference="39B-8Y-IGV"/>
                                 <include reference="lKN-IA-2KJ"/>
-                                <include reference="Hsg-vd-gm5"/>
                                 <include reference="Jvc-L6-MLW"/>
                                 <include reference="9Pm-s4-FV8"/>
-                                <include reference="39B-8Y-IGV"/>
+                                <include reference="Hsg-vd-gm5"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3ao-fJ-ewz"/>
